@@ -16,7 +16,7 @@ import PaymentSuccess from 'page/PaymentSuccess';
 import ChatListPage from 'page/ChatListPage';
 import Artists from 'page/Artists';
 import Announcements from 'page/Announcements';
-import Cartpage from 'page/Cartpage';
+import Cartpage from 'page/CartPage';
 import PaymentPage from 'page/PaymentPage';
 import SearchList from 'page/SearchList';
 

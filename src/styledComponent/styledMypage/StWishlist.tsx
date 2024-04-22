@@ -176,3 +176,31 @@ export const DeleteButton = styled.button`
     transform: scale(1.008);
   }
 `;
+
+export const WishiEmpty = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  min-height: 60vh;
+  text-align: center;
+  word-break: keep-all;
+  line-height: 1.4;
+  h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  h2: @media (max-width: 768px) {
+    margin-top: 0;
+    font-size: 1.375rem;
+  }
+  h2 span {
+    font-weight: bold;
+  }
+  p {
+    color: var(--color-primary-medium-99);
+    line-height: 1.5;
+  }
+`;

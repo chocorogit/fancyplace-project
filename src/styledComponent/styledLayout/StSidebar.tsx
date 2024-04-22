@@ -79,10 +79,10 @@ export const ShowSidebarButton = styled.button`
   @media (max-width: 768px) {
     display: block;
     right: -44px;
-    top: 20px;
+    top: 24px;
     width: 100px;
     display: block;
-    z-index: 31;
+    z-index: 50;
   }
 `;
 

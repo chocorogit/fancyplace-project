@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: fixed;
-  z-index: 9;
+  z-index: 49;
   width: 100%;
   height: 80px;
   transition: all 200ms;
@@ -72,7 +72,20 @@ export const HeaderButton = styled.div`
     bottom: 0;
     background-color: var(--color-white);
     @media (max-width: 768px) {
-      box-shadow: 0px -4px 8px 2px rgba(0, 0, 0, 0.04);
+      &::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        display: block;
+        width: 100%;
+        height: 10px;
+        background: linear-gradient(
+          to top,
+          var(--color-light-gray-ef) 0%,
+          transparent 80%
+        );
+        opacity: 0.5;
+      }
     }
     gap: 0;
     & > * {
@@ -141,6 +154,9 @@ export const MobileName = styled.p`
 
 export const SearchDiv = styled.div`
   position: relative;
+  z-index: 25;
+  @media screen and (max-width: 768px) {
+  }
 `;
 interface SearchProps {
   $setchClick: boolean;
@@ -150,6 +166,7 @@ export const Searchinput = styled.input<SearchProps>`
   justify-content: center;
   padding: 0.375rem 1rem;
   background: var(--color-white);
+  color: var(f--color-primary);
   border-radius: 4rem;
   position: absolute;
   border: 2px solid var(--color-medium-gray-dd);
@@ -161,13 +178,19 @@ export const Searchinput = styled.input<SearchProps>`
   outline: unset;
   visibility: ${(props) => (props.$setchClick ? 'visible' : 'hidden')};
   opacity: ${(props) => (props.$setchClick ? 1 : 0)};
-  transition: all 1s ease-in-out;
   @media screen and (max-width: 768px) {
-    z-index: 25;
-    width: 100vw;
-    height: 48px;
+    position: absolute;
+    top: -60px;
     left: 0;
-    top: -64px;
+    width: 100vw;
+    height: 56px;
+    margin: 0;
+    color: var(--color-primary-medium-33);
+    font-size: 1rem;
+    border-radius: 0;
+    background: var(--color-light-gray-f7);
+    border: none;
+    box-shadow: var(--color-light-gray-ef) 3px -10px 12px -12px inset;
   }
 `;
 
@@ -212,6 +235,11 @@ export const SearchinputButton2 = styled.button<SearchProps>`
   position: absolute;
   @media screen and (max-width: 768px) {
     visibility: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
   }
 `;
 export const Div = styled.div``;

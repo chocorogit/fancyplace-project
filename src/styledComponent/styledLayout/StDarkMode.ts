@@ -19,7 +19,7 @@ export const DarkeModeButton = styled.button<DarkModeButtonProps>`
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.14);
   border-radius: 30px;
   transition: all 200ms;
-  z-index: 99;
+  z-index: 30;
   @media (max-width: 768px) {
     bottom: 80px;
   }
