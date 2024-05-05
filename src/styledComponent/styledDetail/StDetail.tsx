@@ -124,7 +124,7 @@ export const ProductInfoContainer = styled.div`
   height: 100%;
   display: block;
   flex-direction: column;
-  border-radius: 20px;
+  overflow: auto;
   @media (max-width: 768px) {
     position: none;
     width: 100%;
@@ -139,15 +139,14 @@ export const ProductInfoSection1 = styled.section`
 export const ProductInfoSection1_1 = styled.section`
   color: var(--color-medium-gray-aa);
   padding: 0 0 10px 0;
-  font-size: 14px;
+  font-size: 12px;
   border-bottom: 1px solid var(--color-light-gray-e9);
 `;
 export const ProductInfoSection1_2 = styled.section`
   margin-top: 20px;
   h1 {
-    font-size: 20px;
-    line-height: 1.5;
-    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 1.2;
     color: var(--color-primary);
   }
   h4 {
@@ -158,7 +157,7 @@ export const ProductInfoSection1_2 = styled.section`
   }
 `;
 export const ProductInfoSection1_3 = styled.section`
-  margin-top: 40px;
+  margin-top: 24px;
 
   h3 {
     color: var(--color-primary-medium-33);
@@ -188,21 +187,20 @@ export const ProductInfoSection1_3 = styled.section`
   }
 `;
 export const ProductInfoSection2 = styled.section`
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding-top: 24px;
   width: 100%;
 `;
 export const ProductInfoSection2_1 = styled.section`
-  padding-bottom: 40px;
+  padding-bottom: 16px;
   ul {
     font-size: 14px;
     color: var(--color-primary-medium-77);
   }
   h1 {
-    font-weight: normal;
+    font-weight: 500;
     font-size: 14px;
     margin-bottom: 4px;
-    color: var(--color-primary);
+    color: var(--color-primary-medium-77);
   }
   li {
     display: flex;
@@ -213,17 +211,21 @@ export const ProductInfoSection2_1 = styled.section`
   li > span {
     display: inline-block;
     min-width: 38px;
+    color: var(--color-primary-medium-77);
+  }
+  li > span:last-child {
+    color: var(--color-primary-medium-99);
   }
   span {
     line-height: normal;
   }
 `;
 export const ProductInfoSection2_2 = styled.section`
-  padding-bottom: 20px;
+  padding-bottom: 16px;
 `;
 export const ProductInfoSection2_2CartBox = styled.div`
   background-color: var(--color-light-gray-f7);
-  padding: 20px;
+  padding: 16px;
   border-radius: 10px;
 `;
 export const ProductInfoSection2_2CartBoxSection1 = styled.section`
@@ -271,7 +273,7 @@ export const ProductInfoSection2_3 = styled.section`
 `;
 export const ProductInfoSection3 = styled.section`
   width: 100%;
-  height: 300px;
+  height: 240px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -286,17 +288,18 @@ export const ProductInfoSection3 = styled.section`
 export const ProductInfoSection3_1 = styled.section`
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 `;
 export const ProductInfoSection3Btn1 = styled.button`
   border-radius: 30px;
-  height: 56px;
   width: 100%;
+  height: 48px;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-medium-33);
   color: var(--color-white);
+  box-sizing: border-box;
   transition: all 200ms;
   &:hover {
     background-color: var(--color-primary-medium-33);
@@ -317,12 +320,16 @@ export const ProductInfoSection3Btn2 = styled.button`
   color: var(--color-primary);
   border: 1px solid var(--color-medium-gray-aa);
   background-color: var(--color-white);
+  box-sizing: border-box;
   transition: all 200ms;
   &:hover {
     background: var(--color-medium-gray-ee);
   }
   &:active {
     transform: scale(1.008);
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
   }
 `;
 export const ProductP = styled.div`
@@ -351,13 +358,16 @@ export const ProductInfoSection3Btn3 = styled.button`
   font-weight: normal;
   color: var(--color-accent);
   border: 1px solid var(--color-accent);
-
+  box-sizing: border-box;
   transition: all 200ms;
   &:hover {
     background: #f2f1ff;
   }
   &:active {
     transform: scale(1.008);
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
   }
 `;
 
@@ -366,18 +376,22 @@ export const DetailReviewContainer = styled.div`
   height: 100%;
   padding-bottom: 100px;
 `;
-export const DetailReviewInPut = styled.input`
-  width: 100%;
-  height: 48px;
-  border-radius: 8px;
-  border: 1px solid var(--color-primary-medium-99);
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: normal;
+export const DetailReviewInPut = styled.textarea`
   flex: 1;
+  width: 100%;
+  min-height: 160px;
+  padding: 16px;
+  color: var(--color-primary-medium-55);
+  background: none;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 5px;
+  border: 1px solid var(--color-medium-gray-dd);
+  resize: none;
+  outline: none;
 
   &:focus {
-    outline: 1px solid var(--color-primary-medium-99);
+    border: 1px solid var(--color-accent);
   }
 `;
 export const DetailReviewRatingInput = styled.input`
@@ -402,9 +416,11 @@ export const DetailReviewRatingLabel = styled.label`
 `;
 
 export const DetailReviewBtn = styled.button`
-  width: 20%;
+  width: 100%;
   height: 48px;
-  border-radius: 8px;
+  margin-top: 10px;
+  border-radius: 24px;
+  font-size: 14px;
   font-weight: normal;
   background-color: var(--color-primary);
   transition: all 0.2s;
@@ -426,13 +442,27 @@ export const DetailReviewForm = styled.form`
   padding: 20px;
   display: flex;
   flex-direction: column;
-
   gap: 20px;
+  h2 {
+    font-size: 1.125rem;
+    margin: 10px 0;
+  }
+  p {
+    font-size: 0.875rem;
+  }
 `;
 export const DetailReviewFormSection1 = styled.div`
-  display: flex;
-  gap: 10px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 24px;
+  h4 {
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--color-primary-medium-77);
+  }
 `;
 export const DetailReviewList = styled.div`
   display: flex;
@@ -457,7 +487,7 @@ export const DetailReviewContent = styled.div`
 export const DetailReviewContentSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   width: calc(100% - 60px);
 `;
 export const DetailReviewContentSection1 = styled.div`
@@ -483,6 +513,14 @@ export const DetailReviewContentSection2 = styled.div`
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  & p {
+    width: 100%;
+    color: var(--color-primary-medium-55);
+    line-height: 1.3;
+    word-wrap: break-word;
+    word-break: keep-all;
+    white-space: pre-line;
+  }
 `;
 export const DetailReviewImg = styled.img`
   width: 40px;
@@ -495,7 +533,7 @@ export const DetailReviewImg = styled.img`
 `;
 
 export const DetailReviewDeleteBtn = styled.button`
-  width: 50px;
+  width: 40px;
   height: 20px;
   border-radius: 30px;
   font-weight: normal;
@@ -514,6 +552,9 @@ export const DetailReviewerNameH1 = styled.h1`
   text-align: left;
   font-weight: normal;
 
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
   @media (max-width: 768px) {
     width: 150px;
   }

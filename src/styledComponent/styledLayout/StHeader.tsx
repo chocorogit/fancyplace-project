@@ -197,14 +197,14 @@ export const Searchinput = styled.input<SearchProps>`
 export const SearchinputButton1 = styled.button<SearchProps>`
   visibility: ${(props) => (props.$setchClick ? 'visible' : 'hidden')};
   opacity: ${(props) => (props.$setchClick ? 1 : 0)};
-  transition: all 1s ease-in-out;
   left: 0px;
   z-index: ${(props) => (props.$setchClick ? 1 : 0)};
   @media screen and (max-width: 768px) {
     position: absolute;
     z-index: 25;
-    left: 640px;
-    top: -480px;
+    width: 100%;
+    left: calc(100vw - 64px);
+    top: -76px;
   }
 
   @media screen and (max-width: 480px) {

@@ -59,12 +59,16 @@ export const ArtistFilter = styled.div<ArtistFilterProps>`
   color: var(--color-primary-medium-55);
   background: var(--color-white);
   box-sizing: border-box;
+  @media (max-width: 480px) {
+    width: 160px;
+  }
 `;
 export const ArtistFilterBtn = styled.button<ArtistFilterProps>`
   display: inline-block;
   width: 100%;
   height: 100%;
   padding: 10px;
+  box-sizing: border-box;
   @media (max-width: 768px) {
     position: relative;
   }
@@ -72,25 +76,32 @@ export const ArtistFilterBtn = styled.button<ArtistFilterProps>`
 export const ArtistFilterWrapper = styled.div`
   position: relative;
   box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--color-light-gray-f1);
+  border-radius: 5px 5px 0 0;
 `;
 export const ArtistFilterContainer = styled.div`
   width: 100%;
+  padding-bottom: 10px;
   background-color: var(--color-white);
   border-radius: 0 0 20px 20px;
   @media (max-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    width: 402px;
+    width: 292px;
     padding: 20px;
     position: absolute;
-    top: 30px;
+    top: 34px;
+    left: -1px;
     z-index: 2;
-    border-radius: 8px;
+    border-radius: 0 8px 8px 8px;
+    border: 1px solid var(--color-light-gray-f1);
   }
 
   @media (max-width: 480px) {
-    width: 280px;
+    width: 160px;
+    padding: 12px;
+    border-radius: 0 0 8px 8px;
   }
 `;
 export const ArtistFilterArtist = styled.div`
@@ -146,7 +157,7 @@ export const Cate = styled.h2`
     color: var(--color-primary-medium-77);
   }
   > span {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 
@@ -195,13 +206,13 @@ export const ProductsTab = styled.div<ProductsTabProps>`
   font-size: 1rem;
   text-align: center;
   line-height: 1;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-medium-gray-dd);
   border-radius: 3rem;
   color: ${(props) =>
     props.selected ? 'var(--color-white)' : 'var(--color-primary)'};
   cursor: pointer;
   background-color: ${(props) =>
-    props.selected ? 'var(--color-primary)' : 'var(--color-white)'};
+    props.selected ? 'var(--color-primary-medium-33)' : 'var(--color-white)'};
   transition: all 200ms;
   &:hover {
     background-color: ${(props) =>
@@ -401,16 +412,27 @@ export const NotProductDiv = styled.div`
   width: calc((100% - 40px) / 3);
   height: 70vh;
   cursor: pointer;
+  h2 {
+    margin-top: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    span {
+      font-weight: bold;
+    }
+  }
+  p {
+    color: var(--color-primary-medium-99);
+    text-align: center;
+    line-height: 1.5;
+  }
   @media (max-width: 1024px) {
     width: calc((100% - 20px) / 2);
   }
   @media (max-width: 480px) {
     flex: 0 0 100%;
-  }
-  h1 {
-    color: var(--color-primary-medium-55);
-
-    font-size: 3rem;
+    h2 {
+      font-size: 1.25rem;
+    }
   }
 `;
 export const GoodsListPageNumber = styled.div`

@@ -244,12 +244,15 @@ const Product: React.FC<ProductProps> = ({ product }) => {
             <S.DetailReviewContainer>
               <S.DetailReviewForm onSubmit={handleReviewSubmit}>
                 <>
-                  <h1>사용 해보셧나요? 후기를 작성해주세요!</h1>
+                  <h2>리뷰를 작성해보세요!</h2>
+                  <p>상품은 어떠셨나요?</p>
                   <S.DetailReviewRating>
+                    {' '}
                     <StarRate rating={rating} setRating={setRating} />
                   </S.DetailReviewRating>
                 </>
                 <S.DetailReviewFormSection1>
+                  <h4>리뷰 내용</h4>
                   <S.DetailReviewInPut
                     value={newReview}
                     onChange={(e) => {
@@ -268,7 +271,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                     maxLength={100}
                   />
                   <S.DetailReviewBtn type="submit" aria-label="리뷰 저장">
-                    리뷰 등록
+                    리뷰 등록하기
                   </S.DetailReviewBtn>
                 </S.DetailReviewFormSection1>
               </S.DetailReviewForm>
@@ -308,31 +311,15 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                                 }}
                               >
                                 <svg
+                                  xmlns="http://www.w3.org/2000/svg"
                                   width="14"
                                   height="14"
-                                  viewBox="0 0 14 14"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 56 56"
                                 >
-                                  <g clip-path="url(#clip0_41_1369)">
-                                    <path
-                                      d="M16 16L-2 -2M-2 16L16 -2"
-                                      stroke="var(--color-primary-medium-99)"
-                                      stroke-width="1.5"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clipPath id="clip0_41_1369">
-                                      <rect
-                                        width="14"
-                                        height="14"
-                                        fill="white"
-                                        transform="matrix(1 0 0 -1 0 14)"
-                                      />
-                                    </clipPath>
-                                  </defs>
+                                  <path
+                                    fill="var(--color-primary-medium-99)"
+                                    d="M10.023 43.023c-.796.797-.82 2.157 0 2.954c.82.796 2.157.796 2.977 0l15-15l15 15c.797.796 2.156.82 2.977 0c.796-.82.796-2.157 0-2.954L30.953 28l15.024-15c.796-.797.82-2.156 0-2.953c-.844-.82-2.18-.82-2.977 0l-15 15l-15-15c-.82-.82-2.18-.844-2.977 0c-.796.82-.796 2.156 0 2.953l15 15Z"
+                                  />
                                 </svg>
                               </S.DetailReviewDeleteBtn>
                             )}

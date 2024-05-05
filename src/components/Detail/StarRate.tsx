@@ -28,8 +28,8 @@ const StarRate = ({ rating, setRating }: any) => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="39"
+              width="32"
+              height="32"
               viewBox="0 0 14 13"
               fill={
                 ratesResArr[idx] === 1

@@ -1919,7 +1919,28 @@ const GoodsList = () => {
               ) : (
                 <S.NotProduct>
                   <S.NotProductDiv>
-                    <h1>조건에 맞는 상품이 없습니다!</h1>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                      viewBox="0 0 14 14"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12.88 12.39a1 1 0 0 1-.25.78a1 1 0 0 1-.75.33H2.12a1 1 0 0 1-.75-.33a1 1 0 0 1-.25-.78L2 4.5h10ZM4.5 4.5V3a2.5 2.5 0 0 1 5 0v1.5"
+                      />
+                    </svg>
+                    <h2>
+                      <span>제품 준비중</span>입니다.
+                    </h2>
+                    <p>
+                      빠른 시일 내에 제품을 준비할 수 있도록
+                      <br />
+                      노력하겠습니다.
+                    </p>
                   </S.NotProductDiv>
                 </S.NotProduct>
               )}

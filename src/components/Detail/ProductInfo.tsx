@@ -342,7 +342,7 @@ const ProductInfo: React.FC<ProductProps> = ({ product }) => {
               addCartHandler();
               Swal.fire({
                 icon: 'success',
-                title: '장바구니에 담겼습니다.',
+                title: '장바구니에 추가되었습니다.',
                 confirmButtonText: '확인',
                 confirmButtonColor: '#000',
                 text: `${product?.ProductName}`,

@@ -110,7 +110,6 @@ export const LeftContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
-    padding-bottom: 20px;
   }
 
   .titleWrapper {
