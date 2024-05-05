@@ -10,7 +10,7 @@ const Footer = () => {
           <S.FooterInnerWrapper>
             <S.LegalInfo>
               <p>사업장주소 : 서울특별시 우주의 한 구석, 은하수의 끝자락</p>
-              <p>대표자 : 한지연, 서준호, 김소이</p>
+              <p>대표자 : 한지연, 서준호</p>
               <p>통신판매업신고번호 : 제2024-아티스트-1004호</p>
             </S.LegalInfo>
             <S.FooterInfo>

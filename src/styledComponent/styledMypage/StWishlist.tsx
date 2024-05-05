@@ -204,3 +204,16 @@ export const WishiEmpty = styled.div`
     line-height: 1.5;
   }
 `;
+
+export const ToGoodsListLink = styled(Link)`
+display: flex;
+justify-content: center;
+align-items: center;
+max-width: 200px;
+width: 100%;
+height: 48px;
+text-align: center;
+font-weight: 500;
+border: 1px solid var(--color-primary);
+border-radius: 5px;
+}`;

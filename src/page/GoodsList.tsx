@@ -76,6 +76,17 @@ const GoodsList = () => {
     fetchGoods();
   }, [sideCategory]);
 
+  interface darkModeState {
+    darkMode: boolean;
+  }
+  const { darkMode } = useSelector(
+    (state: { darkModeSlice: darkModeState }) => state.darkModeSlice,
+  );
+
+  useEffect(() => {
+    console.log('다크 모드 상태값 변경됨:', darkMode);
+  }, [darkMode]);
+
   let pageNumber = useSelector((state: RootState) => state.goods.currentPage);
   const filteredProduct = goodsList.filter(
     (product: typeProduct) =>
@@ -1765,6 +1776,7 @@ const GoodsList = () => {
                       <S.ArtistFilterArtist key={artist}>
                         <S.ArtistFilterArtistInput
                           type="checkbox"
+                          darkMode={darkMode}
                           checked={selectedArtists.includes(artist)}
                           onChange={() => handleArtistChange(artist)}
                           id={artist}

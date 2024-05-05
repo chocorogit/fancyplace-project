@@ -217,7 +217,6 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                 productReviewOpen === false
                   ? '1px solid var(--color-primary)'
                   : 'none',
-              fontWeight: productReviewOpen === false ? '500' : 'normal',
             }}
             onClick={() => {
               setProductReviewOpen(false);
@@ -231,7 +230,6 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                 productReviewOpen === true
                   ? '1px solid var(--color-primary)'
                   : 'none',
-              fontWeight: productReviewOpen === false ? 'normal' : '500',
             }}
             onClick={() => {
               setProductReviewOpen(true);

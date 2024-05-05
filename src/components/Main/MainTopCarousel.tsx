@@ -27,10 +27,10 @@ const MainTopCarousel = () => {
         // 바로 첫 번째 슬라이드로 이동
         if (slideRef.current) {
           // 이동 애니메이션 제거
-
-          slideRef.current.style.transition = 'none';
+          // sslideRef.current.style.transition = 'none';
           // 바로 첫 번째 슬라이드로 이동
           setCurrentSlide(1);
+
           // 다음 자동 스크롤을 위해 다시 애니메이션 적용
           const nextSlide = () => {
             setCurrentSlide(1);

@@ -6,6 +6,7 @@ export const DtailContainer = styled.div`
   width: 100%;
   height: 100vh;
   overflow: auto;
+  margin-top: 2.5rem;
   padding: 0 2.5rem 0 8.75rem;
   ::-webkit-scrollbar {
     display: none;
@@ -101,7 +102,7 @@ export const ProductTitle = styled.h1`
   border-bottom: 1px solid var(--color-light-gray-e9);
   margin-bottom: 30px;
   button {
-    padding: 12px 20px;
+    padding: 16px 20px;
     cursor: pointer;
     color: var(--color-primary-medium-77);
   }

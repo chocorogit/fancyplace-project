@@ -26,7 +26,7 @@ export const GoodsListContainerSection = styled.section`
   display: flex;
   width: 100%;
   height: 100%;
-  margin-top: 1.5rem;
+  margin-top: 4rem;
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
@@ -104,14 +104,20 @@ export const ArtistFilterArtist = styled.div`
   }
 `;
 
-export const ArtistFilterArtistInput = styled.input`
+interface ArtistFilterArtistInputProps {
+  darkMode: boolean;
+}
+export const ArtistFilterArtistInput = styled.input<ArtistFilterArtistInputProps>`
   display: none;
   &:checked + label::before {
     position: absolute;
     top: 5px;
     left: 10px;
     display: block;
-    content: url('/img/common/checked.svg');
+    content: ${(props) =>
+      props.darkMode
+        ? 'url("/img/common/checked_w.svg")'
+        : 'url("/img/common/checked.svg")'};
     border: 1px solid var(--color-primary);
     border-radius: 3px;
     width: 20px;
@@ -128,6 +134,8 @@ export const ArtistFilterReset = styled.button`
   color: #a8a8a8;
 `;
 export const Cate = styled.h2`
+  position: absolute;
+  top: 2rem;
   display: flex;
   align-items: center;
   font-size: 20px;
